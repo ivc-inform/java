@@ -15,11 +15,11 @@ RUN \
   && apt-get update  \
   && apt-get upgrade -y \
   && apt-get install mc nano inetutils-ping -y \
-  && DEBIAN_FRONTEND=noninteractive apt-get install -y apt-utils software-properties-common python-software-properties \
+  && apt-get install -y apt-utils software-properties-common python-software-properties \
   && add-apt-repository ppa:webupd8team/java -y \
   && apt-get update \
-  && DEBIAN_FRONTEND=noninteractive apt-get install -y oracle-java8-installer \
-  && DEBIAN_FRONTEND=noninteractive apt-get install -y oracle-java8-set-default \
+  && apt-get install -y oracle-java8-installer \
+  && apt-get install -y oracle-java8-set-default \
   && rm -rf /var/lib/apt/lists/* \
   && rm -rf /var/cache/oracle-jdk8-installer
 
